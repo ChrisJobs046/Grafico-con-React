@@ -48,6 +48,7 @@ export const fetchDailyData = async () => {
         return error;
         }
     };
+    
 export const fetchCountries = async () => {
 
     try {

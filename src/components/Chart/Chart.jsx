@@ -37,7 +37,8 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
                 borderColor: 'red',
                 backgroundColor: 'rgba(255, 0, 0, 0.5)',
                 fill: true,
-            }],
+            },
+        ],
         }}
         />) : null
     );
@@ -59,7 +60,8 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
                         'rgba(139, 7, 2, 0.5)'
                     ],
                     data: [ confirmed.value, recovered.value, deaths.value]
-                }]
+                },
+            ],
             }}
             options={{
                 legend: { display: false },
@@ -74,7 +76,7 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
             { country? barChart: lineChart}
         </div>
         
-    )
-}
+    );
+};
 
 export default Chart;

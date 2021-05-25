@@ -6,7 +6,7 @@ import React from 'react';
 
 import { Cards, Chart, CountryPicker } from './components';
 import styles from'./App.Module.css';
-import { fetchData } from './api/'
+import { fetchData } from './api'
 
 import CovidImage from './Images/covid-page-banner2.jpg'
 
