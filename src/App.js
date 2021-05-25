@@ -4,7 +4,7 @@ import React from 'react';
 //import Chart from './components/Chart/Chart';
 //import CountryPicker from './components/CountryPicker/CountryPicker';
 
-import { Cards, Chart, CountryPicker } from './components';
+import { Cards, Chart, CountryPicker } from './Components';
 import styles from'./App.Module.css';
 import { fetchData } from './api'
 
