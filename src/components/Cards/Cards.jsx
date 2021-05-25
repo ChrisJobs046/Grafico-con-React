@@ -8,7 +8,7 @@ const Cards = ( { data: { confirmed, recovered, deaths, lastUpdate } } ) => {
 
     if(!confirmed){
 
-        return '⏱ Loading....';
+        return ' Loading....';
     }
 
     return(

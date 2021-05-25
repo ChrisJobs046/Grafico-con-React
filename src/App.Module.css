@@ -7,14 +7,21 @@ body{
 
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
 }
 
-.image {
+img{
 
-    width: 370px;
-    margin-top: 50px;
+    display:block;
+    margin:auto;
+}
+
+.CovidImage {
+    
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 @media (max-width: 770px){
