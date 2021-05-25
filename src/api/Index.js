@@ -18,24 +18,36 @@ export const fetchData = async ( country ) => {
 
     }catch(error){
 
-        console.log(error);
+        return error;
     }
 
 }
 
-export const fetchDailyDate = async () => {
+/* export const fetchDailyDate = async () => {
 
     try {
         
         const { data } = await axios.get(`${url}/daily`);
 
+        return data.map(({ confirmed, deaths, reportDate: date }) => ({ confirmed.total, deaths: deaths.total, date}));
+
         console.log(data);
 
     } catch (error) {
-        
+        return errorñ
     }
-}
+} */
 
+//ya no tiene globar, trae los datos diarios de estados unidos
+export const fetchDailyData = async () => {
+    try {
+        const { data } = await axios.get('https://api.covidtracking.com/v1/us/daily.json');
+
+        return data.map(({ positive, recovered, death, dateChecked: date }) => ({ confirmed: positive, recovered, deaths: death, date }));
+    }catch (error) {
+        return error;
+        }
+    };
 export const fetchCountries = async () => {
 
     try {
@@ -44,6 +56,8 @@ export const fetchCountries = async () => {
         return countries.map((country) => country.name);
     } catch (error) {
         
-        console.log(error);
+        return error;
+        
+        //console.log(error);
     }
 }
